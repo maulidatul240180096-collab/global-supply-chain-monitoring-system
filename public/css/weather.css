@@ -1,0 +1,120 @@
+body{
+    background:#f4f7fc;
+}
+
+
+/* HEADER */
+
+.weather-header{
+    padding:35px;
+    border-radius:24px;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa
+    );
+    color:white;
+}
+
+
+/* CARD */
+
+.info-card,
+.risk-card{
+    border:none;
+    border-radius:16px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+
+.info-card{
+    position:relative;
+    overflow:hidden;
+    min-height:110px;
+}
+
+
+.info-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #60a5fa
+    );
+}
+
+
+.info-card .card-body,
+.risk-card .card-body{
+    padding:16px 20px;
+}
+
+
+
+/* ICON */
+
+.card-icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:16px;
+    margin-bottom:8px;
+
+    background:#dbeafe;
+}
+
+
+/* WARNA ICON */
+
+.orange{
+    background:#ffedd5;
+    color:#ea580c;
+}
+
+.cyan{
+    background:#cffafe;
+    color:#0891b2;
+}
+
+.yellow{
+    background:#fef3c7;
+    color:#ca8a04;
+}
+
+.blue{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.red{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+
+/* FORM */
+
+.form-select{
+    height:50px;
+    border-radius:14px;
+    border:1px solid #e2e8f0;
+}
+
+
+/* RISK */
+
+.risk-card{
+    min-height:110px;
+    border-left:6px solid #ef4444;
+}

@@ -1,0 +1,59 @@
+body{
+    background:#f4f7fc;
+}
+
+.chart-card{
+    border:none;
+    border-radius:16px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.chart-card .card-body{
+    padding:25px;
+}
+
+.table th{
+    color:#64748b;
+    font-size:13px;
+    font-weight:600;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.table td{
+    vertical-align:middle;
+    color:#111827;
+}
+
+.btn-danger{
+    border:none;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.empty-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#dbeafe;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:30px;
+}
+
+.table-hover tbody tr:hover{
+    background:#f8fafc;
+}
+
+.stats-card{
+    border-radius:20px;
+}
+
+.stats-card h2{
+    font-size:40px;
+    font-weight:700;
+    color:#0f172a;
+}

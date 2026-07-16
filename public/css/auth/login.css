@@ -1,0 +1,51 @@
+/* Background halaman login */
+body {
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1d4ed8,
+        #0ea5e9
+    );
+}
+
+
+/* Card login */
+.auth-card {
+    width: 420px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+
+/* Judul TradeIntel */
+.auth-title {
+    color: #1e40af;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Deskripsi */
+.auth-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-top: 8px;
+}
+
+
+/* Tombol login */
+.auth-button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.auth-button:hover {
+    background: #1d4ed8;
+}

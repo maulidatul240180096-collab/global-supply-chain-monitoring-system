@@ -1,0 +1,10 @@
+body {
+    background: #f3f8ff;
+}
+
+.auth-card {
+    width: 450px;
+    background:white;
+    border-radius:15px;
+    padding:35px;
+}
