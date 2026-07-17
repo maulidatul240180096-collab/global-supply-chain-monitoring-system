@@ -72,7 +72,7 @@ $newsResponse = Http::get(
 );
 
 
-
+dd($newsResponse->json());
 $news = $newsResponse->json()['articles'] ?? [];
 
 $positiveWords = [
