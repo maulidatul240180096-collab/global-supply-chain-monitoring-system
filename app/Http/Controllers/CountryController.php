@@ -26,7 +26,6 @@ public function show($country)
 {
 
 
-
     $countries = json_decode(
         file_get_contents(
             storage_path('app/countries.json')
@@ -76,7 +75,6 @@ $newsResponse = Http::get(
 
 $news = $newsResponse->json()['articles'] ?? [];
 
-dd($newsResponse->json());
 
 $positiveWords = [
     'growth',
