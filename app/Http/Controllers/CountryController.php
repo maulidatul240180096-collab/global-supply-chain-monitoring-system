@@ -31,10 +31,19 @@ public function show($country)
 
 $countries = $response->json();
 
-$countryData = collect($countries)->first(
-    fn ($item) =>
-        strtolower($item['name']['common']) === strtolower($country)
-);
+$countryData = collect($countries)
+    ->filter(function ($item) {
+
+        return is_array($item)
+            && isset($item['name']['common']);
+
+    })
+    ->first(function ($item) use ($country) {
+
+        return strtolower($item['name']['common'])
+            === strtolower($country);
+
+    });
 
 if (!$countryData) {
     abort(404);
