@@ -25,7 +25,7 @@ public function index()
 public function show($country)
 {
 
-dd(env('GNEWS_API_KEY'));
+
 
     $countries = json_decode(
         file_get_contents(
