@@ -10,23 +10,21 @@ class CountryController extends Controller
 
 public function index()
 {
-    $response = Http::get('https://restcountries.com/v3.1/all');
-
-    dd(
-        $response->status(),
-        $response->json()
+    $response = Http::get(
+        'https://restcountries.com/v3.1/all'
     );
+
+    dd($response->body());
 }
 
 public function show($country)
 
 {
-   $countries = json_decode(
-    file_get_contents(
-        storage_path('app/countries.json')
-    ),
-    true
+   $response = Http::get(
+    'https://restcountries.com/v3.1/all?fields=name,cca2,cca3,currencies,region,population,latlng'
 );
+
+$countries = $response->json();
 
 $countryData = collect($countries)->first(
     fn ($item) =>
