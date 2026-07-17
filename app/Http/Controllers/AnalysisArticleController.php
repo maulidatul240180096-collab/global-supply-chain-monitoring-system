@@ -15,11 +15,10 @@ class AnalysisArticleController extends Controller
 
     } else {
 
-        $articles = AnalysisArticle::where(
-            'status',
-            'Published'
-        )->latest()->get();
-
+       $articles = AnalysisArticle::where(
+    'status',
+    'published'
+)->latest()->get();
     }
 
     $countries = json_decode(
