@@ -10,11 +10,16 @@ class CountryController extends Controller
 
 public function index()
 {
-    $response = Http::get(
-        'https://restcountries.com/v3.1/all'
+    $countries = json_decode(
+        file_get_contents(
+            storage_path('app/countries.json')
+        ),
+        true
     );
 
-    dd($response->body());
+    return view('countries.index', [
+        'countries' => $countries
+    ]);
 }
 
 public function show($country)
