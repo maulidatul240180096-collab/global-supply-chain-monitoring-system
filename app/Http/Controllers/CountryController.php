@@ -23,33 +23,31 @@ public function index()
 }
 
 public function show($country)
-
 {
-   $response = Http::get(
-    'https://restcountries.com/v3.1/all?fields=name,cca2,cca3,currencies,region,population,latlng'
-);
+    $countries = json_decode(
+        file_get_contents(
+            storage_path('app/countries.json')
+        ),
+        true
+    );
 
-$countries = $response->json();
+    $countryData = collect($countries)
+        ->filter(function ($item) {
 
-$countryData = collect($countries)
-    ->filter(function ($item) {
+            return is_array($item)
+                && isset($item['name']['common']);
 
-        return is_array($item)
-            && isset($item['name']['common']);
+        })
+        ->first(function ($item) use ($country) {
 
-    })
-    ->first(function ($item) use ($country) {
+            return strtolower($item['name']['common'])
+                === strtolower($country);
 
-        return strtolower($item['name']['common'])
-            === strtolower($country);
+        });
 
-    });
-
-if (!$countryData) {
-    abort(404);
-}
-
-
+    if (!$countryData) {
+        abort(404);
+    }
 
 $currency = array_key_first(
     $countryData['currencies'] ?? []
