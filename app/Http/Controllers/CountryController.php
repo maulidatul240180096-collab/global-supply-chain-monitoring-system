@@ -71,11 +71,9 @@ $newsResponse = Http::get(
     ]
 );
 
-
-
 $news = $newsResponse->json()['articles'] ?? [];
 
-dd(array_keys($newsResponse->json()));
+dd($newsResponse->json());
 
 $positiveWords = [
     'growth',
