@@ -169,13 +169,13 @@
 
     <select name="status" class="form-control" required>
 
-        <option value="Published"
-{{ $article->status == 'Published' ? 'selected' : '' }}>
+    <option value="published"
+{{ $article->status == 'published' ? 'selected' : '' }}>
     Published
 </option>
 
-<option value="Draft"
-{{ $article->status == 'Draft' ? 'selected' : '' }}>
+<option value="draft"
+{{ $article->status == 'draft' ? 'selected' : '' }}>
     Draft
 </option>
 
