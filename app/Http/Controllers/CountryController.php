@@ -10,15 +10,12 @@ class CountryController extends Controller
 
 public function index()
 {
-    $response = Http::get(
-        'https://restcountries.com/v3.1/all'
+    $response = Http::get('https://restcountries.com/v3.1/all');
+
+    dd(
+        $response->status(),
+        $response->json()
     );
-
-    $countries = $response->json();
-
-    return view('countries.index', [
-        'countries' => $countries
-    ]);
 }
 
 public function show($country)
