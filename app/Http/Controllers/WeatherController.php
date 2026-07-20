@@ -33,10 +33,12 @@ $lastUpdate = now()->format('d M Y H:i');
     fn ($item) =>
         strtolower($item['name']['common']) === strtolower($selectedCountry)
 );
-dd($countryData);
+
 
 $lat = $countryData['latlng'][0] ?? 0;
 $lng = $countryData['latlng'][1] ?? 0;
+
+dd($lat, $lng);
 
 
             $weather = Http::get(
