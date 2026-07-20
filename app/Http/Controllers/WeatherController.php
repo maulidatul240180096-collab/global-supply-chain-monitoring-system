@@ -38,7 +38,7 @@ $lastUpdate = now()->format('d M Y H:i');
 $lat = $countryData['latlng'][0] ?? 0;
 $lng = $countryData['latlng'][1] ?? 0;
 
-dd($lat, $lng);
+
 
 
             $weather = Http::get(
@@ -49,6 +49,8 @@ dd($lat, $lng);
                     'current' => 'temperature_2m,wind_speed_10m'
                 ]
             )->json();
+
+            dd($weather);
 
       $temperature =
     $weather['current']['temperature_2m'] ?? 0;
