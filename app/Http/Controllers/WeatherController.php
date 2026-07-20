@@ -50,8 +50,7 @@ $lng = $countryData['latlng'][1] ?? 0;
                 ]
             )->json();
 
-            dd($weather);
-
+            
       $temperature =
     $weather['current']['temperature_2m'] ?? 0;
 
